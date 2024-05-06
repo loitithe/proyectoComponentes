@@ -13,7 +13,7 @@ public class Main extends JFrame {
         ImageIcon blueStrip = new ImageIcon("resources/BlueStrip.png");
         ImageIcon greenStrip = new ImageIcon("resources/GreenStrip.png");
         ImageIcon pinkStrip = new ImageIcon("resources/PinkStrip.png");
-        ImageIcon imgCircuito = new ImageIcon("resources/luigicircuit.png");
+        ImageIcon imgCircuito = new ImageIcon("src/resources/luigicircuit.png");
 
         // Creación del vehículo y el circuito
         Vehiculo vehiculo = new Vehiculo(blackOut); // Proporciona la ruta correcta
@@ -28,15 +28,10 @@ public class Main extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 System.out.println(e.getSource());
-                circuito.setSize(600, 1200);
                 add(circuito, BorderLayout.CENTER);
                 circuito.setVisible(true);
-
                 circuito.requestFocus();
 
-
-                // Agregar el circuito al centro del JFrame
-                add(circuito, BorderLayout.CENTER);
                 repaint();
             }
         });
@@ -44,7 +39,7 @@ public class Main extends JFrame {
         add(start, BorderLayout.SOUTH);
         // Configuración del JFrame
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(600, 1200);
+        setSize(400, 400);
         setLocationRelativeTo(null);
         setVisible(true);
 
